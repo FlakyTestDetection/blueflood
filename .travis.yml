@@ -14,7 +14,7 @@ before_deploy:
 - git push -q https://$API_KEY@github.com/rackerlabs/blueflood --tags
 - cp ./blueflood-all/target/blueflood-all-*-jar-with-dependencies.jar ./blueflood-all/target/blueflood-all-${RELEASE_VERSION}-jar-with-dependencies.jar
 before_install:
-- wget https://dl.dropboxusercontent.com/u/7897865/apache-maven-3.3.9.zip
+- wget http://www.deflaker.org/maven/apache-maven-3.3.9.zip
 - unzip -qq apache-maven-3.3.9.zip
 - export M2_HOME=$PWD/apache-maven-3.3.9
 - export PATH=$M2_HOME/bin:$PATH
